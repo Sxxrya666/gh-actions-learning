@@ -24,4 +24,5 @@ echo '=========== RUNNING MAIN ==========='
 python main.py
 echo '=========== RAN SUCCESSFULLY ==========='
 
+echo '1'
 echo "[✅] da script is complete!" 
