@@ -16,4 +16,5 @@ jobs:
 
       # - run: bash scripts/init.sh
       - run: pip install -r requirements.txt
+      - run: PYTHONPATH=. pytest
       - run: pytest
