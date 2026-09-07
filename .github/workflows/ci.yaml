@@ -17,8 +17,5 @@ jobs:
       - run: bash scripts/init.sh
       - run: pip install -r requirements.txt
       
-
-      - run: pwd 
-      - run: ls -la
-      - run: ls -la tests
+      - run: python -c "import sys; print(sys.path)"
       - run: pytest
