@@ -9,11 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
         # had to look the "uses" keyword from google . i forgot . dont have intuition for remembering this keyword
-      - run: 'scripts/init.sh'
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: 
           python-version: "3.12" 
 
+      - run: bash scripts/init.sh
       - run: pip install -r requirements.txt
       - run: pytest
+      
