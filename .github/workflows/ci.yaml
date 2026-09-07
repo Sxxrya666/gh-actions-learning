@@ -14,8 +14,7 @@ jobs:
         with: 
           python-version: "3.12" 
 
-      - run: bash scripts/init.sh
+      # - run: bash scripts/init.sh
       - run: pip install -r requirements.txt
-      
-      - run: python -c "import sys; print(sys.path)"
+      - run: python -c "from main import greet; print('import works')"
       - run: pytest
