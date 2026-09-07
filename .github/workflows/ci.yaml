@@ -16,5 +16,4 @@ jobs:
 
       # - run: bash scripts/init.sh
       - run: pip install -r requirements.txt
-      - run: python -c "from main import greet; print('import works')"
       - run: pytest
