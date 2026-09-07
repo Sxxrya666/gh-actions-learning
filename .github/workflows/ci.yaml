@@ -1,0 +1,18 @@
+# Can you write a workflow that triggers on push, runs on Ubuntu, checks out the code, sets up Python 3.12, installs requirements.txt, and runs pytest?
+
+on: 
+ push: # doubtful if this semicolon is to be removed . its weird like the docker volumnes command int he compose file syntax
+
+
+jobs: 
+  full_flow: 
+    runs-on: ubuntu-latest
+    steps: 
+        # had to look the "uses" keyword from google . i forgot . dont have intuition for remembering this keyword
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: 
+          python-version: "3.12" 
+
+      - run: pip install -r requirements.txt
+      - run: pytest
